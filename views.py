@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from .forms import LoginForm
@@ -7,8 +7,6 @@ from .forms import LoginForm
 
 
 
-def logout_user(request):
-    return HttpResponse('logout')
 
 class LoginUser(LoginView):
     form_class = LoginForm
